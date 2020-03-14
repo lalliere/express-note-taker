@@ -1,5 +1,6 @@
-const db = require("../db/db");
+const db = require("../db/db.json");
 const uuidv4 = require("uuid/v4");
+let fileupdates = require("../public/assets/js/fileupdates")
 
 
 module.exports = function(app) {
@@ -20,22 +21,25 @@ module.exports = function(app) {
 
     res.json(nNote);
 
+    return fileupdates.fileOfNotes(nNote);
     //WHERE WE WILL PUT THE OBJECT THAT WILL READ AND WRITE TO THE DB.JSON
   });
 
   app.delete("/api/notes/:id", function(req, res) {
-    let filterdb = db.filter(function(item) {
-      if (item.id = req.params.id) {
-        return false;
-      }
-      else {
-        return true;
-      }
-    });
+    console.log(req.body);
     
-    console.log(filterdb);
+    // let filterdb = db.filter(function(item) {
+    //   if (item.id = req.params.id) {
+    //     return false;
+    //   }
+    //   else {
+    //     return true;
+    //   }
+    // });
+    
+    // console.log(filterdb);
 
-    res.json(filterdb);
+    // res.json(filterdb);
 
   });
 };
