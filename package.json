@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^3.0.0",
     "express": "^4.16.4",
     "fs": "0.0.1-security",
     "uuidv4": "^6.0.6"
