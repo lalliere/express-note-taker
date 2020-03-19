@@ -1,10 +1,5 @@
 const express = require("express");
 
-
-// const apiRoutes = require("./Develop/routes/apiRoutes");
-// const htmlRoutes = require("./Develop/routes/htmlRoutes");
-// const index = require("./Develop/public/assets/js/index");
-
 const app = express();
 
 const PORT = process.env.PORT || 8080;
