@@ -29,7 +29,7 @@ module.exports = function(app) {
     
       fs.writeFile("db/noteList.json", JSON.stringify(notesArray), "utf8", err => {
         if (err) throw err;
-        console.log("Successfully wrote to 'noteList.json' file");
+        console.log(chalk.blue("Successfully wrote to 'noteList.json' file"));
         res.status(200).end();
         
       })
@@ -38,7 +38,6 @@ module.exports = function(app) {
   });
 
   app.delete("/api/notes/:id", function(req, res) {
-    console.log(req.body);
 
     fs.readFile("db/noteList.json", function (err, data) {
       if (err) throw err;
@@ -50,7 +49,7 @@ module.exports = function(app) {
         if (err) throw err;
         res.status(200).end();
 
-        console.log("Successfully deleted note.");
+        console.log(chalk.blueBright("Successfully deleted note."));
         
       })
     });

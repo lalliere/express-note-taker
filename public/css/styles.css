@@ -2,6 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-image: url(./dot-grid/dot-grid.png);
 }
 
 .save-note {
@@ -43,6 +44,7 @@ html, body {
   border-bottom: none;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  background-image: url(./dot-grid/dot-grid.png);
 }
 
 .list-container {
